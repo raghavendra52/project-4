@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Login</title>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <h1>Welcome to Google Login App</h1>
+<div class="div1">
+  <% if (user) { %>
+    <p>Hello, <%= user.displayName %></p>
+    <a href="/dashboard">Go to Dashboard</a><br>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <a href="/auth/google" class="login">Login with Google</a>
+  <% } %>
+</div>
+</body>
+</html>
