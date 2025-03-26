@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+h3{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.div1{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 10%
+   
+}
+.login{
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    border: 2px black solid;
+    border-radius: 10%;
+    padding: 10px 10px;
+    background-color: dimgray;
+}
+
+li{
+    text-decoration: none;
+    color: white;
+    border: white 4px solid;
+    font-size: large;
+    padding:10px 0px;
+    width: fit-content;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+ul{
+   display: flex;
+   flex-direction: column;
+   list-style-type: none;
+   justify-content: center;
+   align-items: center;
+}
+a{
+    color: yellow;
+    text-decoration: none;
+    padding: 20px 20px;
+    margin: 0;
+}
