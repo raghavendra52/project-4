@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>App 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .user-info {
+            color: #666;
+            margin-top: 20px;
+        }
+        .back-link {
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to App 1</h1>
+        <div class="user-info">
+            <p>Hello, <%= user.name %>!</p>
+            <p>You are logged in with: <%= user.email %></p>
+        </div>
+        <a href="http://localhost:3000/client/dashboard" class="back-link">Back to Main Dashboard</a>
+    </div>
+</body>
+</html> 

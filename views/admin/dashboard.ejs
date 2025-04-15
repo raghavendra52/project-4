@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-tabs {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-tabs a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            margin-right: 5px;
+        }
+        .nav-tabs a.active {
+            border: 1px solid #ddd;
+            border-bottom: none;
+            background: #fff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .logout-btn {
+            float: right;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/logout" class="logout-btn">Logout</a>
+        <h1>Admin Dashboard</h1>
+        
+        <div class="nav-tabs">
+            <a href="/admin/dashboard" class="active">Login Logs</a>
+            <a href="/admin/requests">Access Requests</a>
+        </div>
+
+        <h2>Client Login Logs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Login Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% logs.forEach(function(log) { %>
+                    <tr>
+                        <td><%= log.name %></td>
+                        <td><%= log.email %></td>
+                        <td><%= new Date(log.login_time).toLocaleString() %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html> 
